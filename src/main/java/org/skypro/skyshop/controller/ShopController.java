@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/shop") 
+@RequestMapping("/shop")
 public class ShopController {
 
     private final StorageService storageService;
@@ -44,7 +44,7 @@ public class ShopController {
     @GetMapping("/basket/{id}")
     public String addProduct(@PathVariable("id") UUID id) {
         basketService.addProductToBasket(id);
-        return "Продукт успешно добавлен";
+        return "Product added to basket";
     }
 
     @GetMapping("/basket")
